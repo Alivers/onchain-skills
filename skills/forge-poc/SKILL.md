@@ -1,6 +1,6 @@
 ---
 name: forge-poc
-description: Write and run a Foundry fork-based proof-of-concept to reproduce or validate an EVM contract exploit. Use when the user wants to fork mainnet/L2 at a block, reproduce a past hack, prove a vulnerability is exploitable, manipulate on-chain state (impersonate accounts, set balances/storage), or turn an attack hypothesis into a runnable `forge test`. Triggers: "write a PoC", "fork at block X", "reproduce this exploit", "is this exploitable", "复现攻击", "写个 PoC".
+description: Write and run a Foundry fork-based proof-of-concept that proves an EVM contract vulnerability by reproducing it as a passing `forge test`. Use this whenever the user wants to fork mainnet or an L2 at a specific block, reproduce a past hack, demonstrate that a bug is actually exploitable, manipulate on-chain state in a test (impersonate accounts with prank, set balances/storage with deal/store), measure an attacker's profit, or turn an attack hypothesis into runnable code — even if they don't say "PoC" explicitly. This is the write-and-execute counterpart to tx-decoder (which only reads/explains an existing tx): reach for forge-poc the moment the goal shifts from understanding to proving. Triggers: "write a PoC", "fork at block X", "reproduce this exploit/hack", "is this actually exploitable", "prove the bug", "复现攻击", "写个 PoC", "这个漏洞能打通吗".
 ---
 
 # forge-poc
