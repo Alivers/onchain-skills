@@ -12,9 +12,9 @@ workspace, so you can `git clone` and start writing PoCs immediately.
 |---|---|---|---|
 | `forge-poc` | L1 | Fork a chain at a block, write & run a Foundry PoC to reproduce/validate an exploit | ✅ |
 | `tx-decoder` | L2 | One tx hash → call tree + decoded calldata/events + value flow + "what happened" | ✅ |
-| `cast-inspect` | L1 | Read storage/state, replay & trace txs, decode calldata with `cast` | ⬜ planned |
+| `contract-recon` | L2 | One address → source/interface (incl. unverified), proxy→impl, owner/admin, attack surface | ✅ |
 | `vuln-patterns` | L3 | Library of historical vuln classes: per-class heuristics + minimal PoC sketches (progressive disclosure) | ✅ |
-| `contract-recon` | L2 | One address → source/decompile + proxy detection + attack surface | ⬜ planned |
+| `cast-inspect` | L1 | Read storage/state, replay & trace txs, decode calldata with `cast` | ⬜ planned |
 | (orchestrator) | L4 | address/tx → recon → decode → hypothesize → PoC → verify | ⬜ planned |
 
 ## Install as a plugin
