@@ -92,6 +92,33 @@ contract MyExploit is PoCTest {
 | Expect a revert | `vm.expectRevert(bytes)` |
 | Label trace addresses | `vm.label(addr, "Vault")` |
 
+## Two fork modes — pick the right one
+
+The skeleton above forks **inside a forge test** (`vm.createSelectFork`) — the right
+default for a PoC you keep: deterministic, assertion-based, committable.
+
+For **interactive** work — "what does this call return on forked state?", driving the
+fork from `cast`/scripts/a frontend, or reusing one warm fork across many ad-hoc
+calls — run a **standalone anvil node** instead and talk to it over its local RPC:
+
+```bash
+anvil --fork-url "$MAINNET_RPC_URL" --fork-block-number 19000000   # node on :8545
+```
+Then drive it with `cast` against `http://localhost:8545` via anvil's cheat-RPCs
+(the live-node equivalents of the `vm.*` cheatcodes above):
+```bash
+cast rpc anvil_impersonateAccount 0xWHALE
+cast send 0xVAULT "withdraw()" --from 0xWHALE --unlocked            # act as impersonated
+cast rpc anvil_setBalance   0xATTACKER 0x21e19e0c9bab2400000        # 10000 ether
+cast rpc anvil_setStorageAt 0xTOKEN <slot> <value>                  # overwrite a slot
+S=$(cast rpc evm_snapshot); cast rpc evm_revert "$S"               # try / rewind
+cast rpc evm_mine                                                   # mine a block
+```
+Use the anvil fork to **explore and confirm fast**; once the idea works, crystallize
+it into the committable forge-test PoC above — that's the durable artifact, the anvil
+session is scratch space. (`cast run <txhash>` already forks in-process to replay an
+*existing* tx — reach for anvil when you want to drive *new* calls against forked state.)
+
 ## Patterns by use case
 
 - **Post-mortem replay:** fork at `attack_block - 1`, re-run the attacker's steps
