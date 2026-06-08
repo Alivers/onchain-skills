@@ -14,8 +14,11 @@ workspace, so you can `git clone` and start writing PoCs immediately.
 | `tx-decoder` | L2 | One tx hash → call tree + decoded calldata/events + value flow + "what happened" | ✅ |
 | `contract-recon` | L2 | One address → source/interface (incl. unverified), proxy→impl, owner/admin, attack surface | ✅ |
 | `vuln-patterns` | L3 | Library of historical vuln classes: per-class heuristics + minimal PoC sketches (progressive disclosure) | ✅ |
-| `cast-inspect` | L1 | Read storage/state, replay & trace txs, decode calldata with `cast` | ⬜ planned |
-| (orchestrator) | L4 | address/tx → recon → decode → hypothesize → PoC → verify | ⬜ planned |
+| `onchain-investigate` | L4 | Orchestrator: address/tx → decode → recon → hypothesize → PoC → verify, looped until a green PoC matches reality | ✅ |
+
+> Low-level `cast` inspection (read storage/state, replay & trace txs, decode
+> calldata) is intentionally **not** a separate skill — those primitives live where
+> they're used, inside `tx-decoder`, `contract-recon`, and `forge-poc`.
 
 ## Install as a plugin
 
