@@ -1,0 +1,21 @@
+[
+  {"query": "this protocol prices collateral off a uniswap v2 pair's reserves and lets you borrow in the same tx — what class of bug is that and how would it be attacked", "should_trigger": true},
+  {"query": "what kinds of vulnerabilities should I systematically check for when looking at a new lending protocol for a bug bounty", "should_trigger": true},
+  {"query": "explain how oracle manipulation with a flash loan actually works, mechanically", "should_trigger": true},
+  {"query": "the vault calculates shares as assets * totalSupply / balanceOf(this) — is this the first-deposit inflation thing? how does the attack go", "should_trigger": true},
+  {"query": "这是什么漏洞？合约在转账之后才更新余额", "should_trigger": true},
+  {"query": "give me a checklist of the common ways ERC4626 vaults get exploited", "should_trigger": true},
+  {"query": "is a view function returning a stale virtual price mid-callback a known attack pattern? what's it called", "should_trigger": true},
+  {"query": "what's the difference between cross-function and read-only reentrancy and how do attackers use each", "should_trigger": true},
+  {"query": "I see ecrecover used without a nonce or deadline — what could go wrong here", "should_trigger": true},
+  {"query": "decode this transaction 0x9f2b...e1 and tell me what happened", "should_trigger": false},
+  {"query": "is the contract at 0x7d27...c7A9 a proxy and who owns it", "should_trigger": false},
+  {"query": "write a forge PoC that reproduces this reentrancy and asserts the profit", "should_trigger": false},
+  {"query": "do a full post-mortem of the Mango Markets hack and reproduce it", "should_trigger": false},
+  {"query": "fix the reentrancy in my withdraw function — add a guard and reorder the state update", "should_trigger": false},
+  {"query": "recover the ABI of this unverified contract", "should_trigger": false},
+  {"query": "what was the total value lost across all defi hacks in 2024?", "should_trigger": false},
+  {"query": "trace the internal calls in this attack tx", "should_trigger": false},
+  {"query": "implement an ERC4626 vault for me with proper inflation protection", "should_trigger": false},
+  {"query": "what's the gas cost of a delegatecall", "should_trigger": false}
+]

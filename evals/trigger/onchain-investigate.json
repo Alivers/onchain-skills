@@ -1,0 +1,21 @@
+[
+  {"query": "do a full post-mortem on the Radiant Capital hack — figure out exactly what happened and reproduce it with a working PoC", "should_trigger": true},
+  {"query": "this protocol just got drained for ~$8M, here's the attack tx 0x9f2b...e1 and the victim contract 0x7d27...c7A9. investigate the whole thing and prove the root cause", "should_trigger": true},
+  {"query": "figure out how this was exploited end to end and show me a reproduction", "should_trigger": true},
+  {"query": "I want to find and prove a vulnerability in this protocol — here's the main contract address, take it all the way to a PoC", "should_trigger": true},
+  {"query": "复盘一下这次被黑：解析攻击交易、看懂合约、定位漏洞、然后 fork 复现", "should_trigger": true},
+  {"query": "can you do the complete analysis of this exploit — decode it, understand the contracts, name the bug, and reproduce it so we're sure", "should_trigger": true},
+  {"query": "here's a hack that happened on base last week, dig into it properly and don't stop until you've reproduced the loss", "should_trigger": true},
+  {"query": "investigate this attack from the tx all the way to a green PoC matching the real profit", "should_trigger": true},
+  {"query": "just decode this one transaction for me 0x9f2b...e1, I only need the call tree", "should_trigger": false},
+  {"query": "just tell me whether 0x1f98...F984 is a proxy and what the implementation is", "should_trigger": false},
+  {"query": "I already found the exact bug — just write the forge PoC for this specific reentrancy", "should_trigger": false},
+  {"query": "what class of vulnerability is it when collateral is priced from a spot AMM read", "should_trigger": false},
+  {"query": "recover the function selectors from this unverified bytecode", "should_trigger": false},
+  {"query": "explain how the Mango Markets attack worked at a high level, I don't need a reproduction", "should_trigger": false},
+  {"query": "what's the current price of ETH", "should_trigger": false},
+  {"query": "review my smart contract code for security issues before I deploy", "should_trigger": false},
+  {"query": "decode this calldata 0xa9059cbb...", "should_trigger": false},
+  {"query": "who owns this contract and can they upgrade it", "should_trigger": false},
+  {"query": "set up an anvil fork and let me poke at the state manually", "should_trigger": false}
+]

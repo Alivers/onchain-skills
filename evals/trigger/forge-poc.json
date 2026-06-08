@@ -1,0 +1,21 @@
+[
+  {"query": "ok so i'm pretty sure the lending pool at 0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9 has a reentrancy issue in its liquidation path. can you fork mainnet around block 19400000 and write a foundry test that actually drains it so i can prove it", "should_trigger": true},
+  {"query": "reproduce the Euler finance hack as a forge test — fork at the block before the attack and show the attacker walking away with the DAI", "should_trigger": true},
+  {"query": "is this actually exploitable or am i imagining it? show me a PoC that extracts value", "should_trigger": true},
+  {"query": "spin up an anvil fork of arbitrum, impersonate the 0x...whale, and demonstrate that calling withdraw twice drains the vault", "should_trigger": true},
+  {"query": "我怀疑这个合约的预言机用的是 uniswap 现货价，帮我 fork 一下用闪电贷把价格打歪然后证明能套利", "should_trigger": true},
+  {"query": "write me a forge test that forks bsc at block 28500000 and reproduces the price manipulation, asserting the profit at the end", "should_trigger": true},
+  {"query": "I found what looks like a first-deposit share inflation bug in this ERC4626 vault. can you prove a victim's deposit rounds to zero shares with a runnable test", "should_trigger": true},
+  {"query": "set up a fork and use vm.store to overwrite the owner slot, then show that the upgrade function is callable by us", "should_trigger": true},
+  {"query": "can you turn this attack hypothesis into something I can actually run and check the numbers on", "should_trigger": true},
+  {"query": "decode this transaction 0x9f2b...e1 and tell me what the attacker did", "should_trigger": false},
+  {"query": "is 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 a proxy and what's the implementation address?", "should_trigger": false},
+  {"query": "explain how read-only reentrancy works conceptually, I keep getting confused about the curve case", "should_trigger": false},
+  {"query": "write a unit test for my ERC20's transfer function to make sure it reverts on insufficient balance", "should_trigger": false},
+  {"query": "deploy my Vault.sol to sepolia and verify it on etherscan", "should_trigger": false},
+  {"query": "do a full post-mortem of the Radiant hack — figure out what happened and reproduce it end to end", "should_trigger": false},
+  {"query": "what vulnerability classes should I be checking for on a new perpetuals protocol?", "should_trigger": false},
+  {"query": "my forge test is failing with 'missing trie node', how do I fix my RPC setup?", "should_trigger": false},
+  {"query": "gas profile this function and tell me where the hot spots are", "should_trigger": false},
+  {"query": "recover the ABI for this unverified contract so I know what functions it has", "should_trigger": false}
+]

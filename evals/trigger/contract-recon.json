@@ -1,0 +1,21 @@
+[
+  {"query": "take a look at the contract at 0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9 and tell me what it does and where it's attackable", "should_trigger": true},
+  {"query": "is 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984 a proxy? if so what's the real implementation behind it", "should_trigger": true},
+  {"query": "this contract isn't verified on etherscan, can you recover its ABI / function selectors so I know what I can call", "should_trigger": true},
+  {"query": "who owns and can upgrade the protocol at 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 — is the admin an EOA or a multisig", "should_trigger": true},
+  {"query": "map the attack surface of this vault contract — which external functions move money and what guards them", "should_trigger": true},
+  {"query": "看下这个地址 0x6b17... 是干嘛的，是不是代理，实现合约在哪", "should_trigger": true},
+  {"query": "I have a bounty target, here's the main address — do recon on it, I want to know the proxy structure, owner, and the risky functions", "should_trigger": true},
+  {"query": "pull the source for this address and figure out if the initialize function is still callable", "should_trigger": true},
+  {"query": "decode transaction 0x9f2b...e1 for me", "should_trigger": false},
+  {"query": "write a PoC that drains this vault on a fork", "should_trigger": false},
+  {"query": "do an end-to-end investigation of the hack and reproduce it", "should_trigger": false},
+  {"query": "what did the attacker do in this tx, trace the calls", "should_trigger": false},
+  {"query": "explain what a diamond proxy (EIP-2535) is", "should_trigger": false},
+  {"query": "what kinds of vulnerabilities are common in ERC4626 vaults?", "should_trigger": false},
+  {"query": "decode this raw calldata 0xa9059cbb...", "should_trigger": false},
+  {"query": "fork mainnet and impersonate the owner to pause the contract", "should_trigger": false},
+  {"query": "deploy a fresh copy of this proxy pattern for my own project", "should_trigger": false},
+  {"query": "is this reentrancy actually exploitable, show me the profit", "should_trigger": false},
+  {"query": "what's the ETH balance of this address right now", "should_trigger": false}
+]
