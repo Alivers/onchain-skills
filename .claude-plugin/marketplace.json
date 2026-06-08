@@ -1,0 +1,13 @@
+{
+  "name": "onchain-skills",
+  "owner": { "name": "Alivers" },
+  "plugins": [
+    {
+      "name": "onchain-skills",
+      "source": "./",
+      "description": "EVM on-chain vulnerability analysis: Foundry fork PoCs, tx decoding, contract recon, historical vuln patterns.",
+      "category": "security",
+      "keywords": ["evm", "solidity", "security", "foundry", "exploit", "defi"]
+    }
+  ]
+}

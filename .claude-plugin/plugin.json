@@ -1,0 +1,7 @@
+{
+  "name": "onchain-skills",
+  "version": "0.1.0",
+  "description": "Skills for analyzing EVM on-chain contract vulnerabilities: Foundry fork PoCs, transaction decoding, contract recon, and a library of historical vuln patterns.",
+  "author": { "name": "Alivers" },
+  "keywords": ["evm", "solidity", "security", "foundry", "exploit", "defi"]
+}
