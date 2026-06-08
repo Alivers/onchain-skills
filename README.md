@@ -10,7 +10,9 @@ workspace, so you can `git clone` and start writing PoCs immediately.
 
 | Skill | Layer | What it does | Status |
 |---|---|---|---|
+| `chain-access` | L0 | Set up & diagnose RPC/explorer access: archive probe, cheapest trace method, rate-limit workarounds, per-chain config | ✅ |
 | `forge-poc` | L1 | Fork a chain at a block, write & run a Foundry PoC to reproduce/validate an exploit | ✅ |
+| `invariant-testing` | L1 | Discover bugs via Foundry invariant/fuzz tests — find a violating sequence, then harden with forge-poc | ✅ |
 | `tx-decoder` | L2 | One tx hash → call tree + decoded calldata/events + value flow + "what happened" | ✅ |
 | `contract-recon` | L2 | One address → source/interface (incl. unverified), proxy→impl, owner/admin, attack surface | ✅ |
 | `vuln-patterns` | L3 | Library of historical vuln classes: per-class heuristics + minimal PoC sketches (progressive disclosure) | ✅ |
