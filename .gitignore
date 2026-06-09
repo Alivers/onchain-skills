@@ -36,3 +36,5 @@ broadcast/
 
 # Foundry deps (run: forge install)
 lib/
+
+tmp/
